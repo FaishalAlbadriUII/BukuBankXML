@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bukubank.FXMLDocumentController">
+   <children>
+      <Label layoutX="224.0" layoutY="26.0" prefHeight="50.0" prefWidth="279.0" text="Pencatatan Buku Bank">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfDescAdd" layoutX="21.0" layoutY="119.0" prefHeight="27.0" prefWidth="149.0" promptText="Deskripsi" />
+      <TextField fx:id="tfDebitAdd" layoutX="21.0" layoutY="161.0" prefHeight="27.0" prefWidth="149.0" promptText="Debit" />
+      <TextField fx:id="tfCreditAdd" layoutX="21.0" layoutY="205.0" prefHeight="27.0" prefWidth="149.0" promptText="Credit" />
+      <Button layoutX="21.0" layoutY="248.0" mnemonicParsing="false" onAction="#handleButtonAdd" prefHeight="27.0" prefWidth="149.0" text="Tambah" />
+      <Label layoutX="38.0" layoutY="91.0" prefHeight="18.0" prefWidth="124.0" text="Tambah Data Bank" />
+      <Label layoutX="51.0" layoutY="297.0" text="Edit Data Bank" />
+      <ComboBox fx:id="cbEdit" layoutX="25.0" layoutY="325.0" onAction="#onComboBoxEditClick" prefHeight="27.0" prefWidth="141.0" promptText="Pilih Data" />
+      <TextField fx:id="tfDescEdit" layoutX="25.0" layoutY="365.0" prefHeight="27.0" prefWidth="141.0" promptText="Deskripsi" />
+      <TextField fx:id="tfDebitEdit" layoutX="24.0" layoutY="404.0" prefHeight="27.0" prefWidth="141.0" promptText="Debit" />
+      <TextField fx:id="tfCreditEdit" layoutX="24.0" layoutY="440.0" prefHeight="27.0" prefWidth="141.0" promptText="Credit" />
+      <Button layoutX="23.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleButtonEdit" prefHeight="27.0" prefWidth="141.0" text="Edit" />
+      <Button layoutX="199.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleButtonReset" prefHeight="27.0" prefWidth="496.0" text="Reset Semua Data" />
+      <TableView fx:id="tableData" layoutX="199.0" layoutY="100.0" prefHeight="367.0" prefWidth="496.0">
+        <columns>
+          <TableColumn fx:id="tcNomor" prefWidth="41.0" text="Id" />
+          <TableColumn fx:id="tcDesc" prefWidth="111.0" text="Deskripsi" />
+            <TableColumn fx:id="tcDebit" prefWidth="92.0" text="Debit" />
+            <TableColumn fx:id="tcKredit" prefWidth="86.0" text="Credit" />
+            <TableColumn fx:id="tcDetail" prefWidth="94.0" text="Detail" />
+            <TableColumn fx:id="tcAction" prefWidth="71.0" text="Delete" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
